@@ -13,25 +13,21 @@
 <body>
 	<header>
 		<span>
-			<span id="health">Health = 100</span>
-		</span>
-		<span>
-			<span id="name">Name = BOZO</span>
-		</span>
-		<span>
-			<span id="hits">Hits = 0</span>
+			<span id="player1.name">Name:Bozo<span> <!--Cannot get to update dynamically-->
+			<span id="player1.health">Health: 105</span>
+			<span id="player1.hits">Hits: 0</span>
 		</span>
 	</header>
 	<img src="//placehold.it/200x200/" alt="">
 	<script src="game.js"></script>
 	<footer>
-		<button class="btn btn-default" onclick="slap('health')">
+		<button class="btn btn-default" onclick="slap('player1.health')">
 			<h1>Slap</h1>
 		</button>
-		<button class="btn btn-default" onclick="punch('health')">
+		<button class="btn btn-default" onclick="punch('player1.health')">
 			<h1>Punch</h1>
 		</button>
-		<button class="btn btn-default" onclick="kick('health')">
+		<button class="btn btn-default" onclick="kick('player1.health')">
 			<h1>Kick</h1>
 		</button>
 	</footer>
