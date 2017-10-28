@@ -3,16 +3,7 @@ function Player(name, health, hits) {
     this.health = health;
     this.hits = hits;
     this.items = [];
-    //why????
-    this.addMods = function(){
-        var mods = 1;
-        for(var i = 0; i < this.items.length; i++){
-            var item = this.items[i];
-            mods += item.modifier;
-        }
-        return mods;
-    }
-    console.log(addMods)
+    this.mods = [];
 }
 var player1 = new Player('Bozo', 105, 0)
 
@@ -32,7 +23,7 @@ function punch() {
     // player1.name === "Bozo"
     if (player1.health >= 5) {
         player1.health -= 5;
-        player1.hits += 5;
+        player1.hits += 1;
         
     } else {
         player1.health = 0;
@@ -43,7 +34,7 @@ function kick() {
     // player1.name === "Bozo"
     if (player1.health >= 10) {
         player1.health -= 10;
-        player1.hits += 10;
+        player1.hits += 1;
         
     } else {
         player1.health = 0;
@@ -79,14 +70,14 @@ giveShield(object)
 giveBalloon(object)
 giveShoe(object)
 
-// function addMods(items){
-//     output = 1
-//     for (var i = 0; i < items.length; i++) {
-//        items[i]
-//        console.log(items[i])
-//     }
-    
-//     console.log(items[i])
+function addMods(items){
+    mods = 1
+    for (var i = 0; i < items.length; i++) {
+       var mods = items[i]
+     
+    }
+   
+}
 
 
 
