@@ -2,3 +2,16 @@
 .headshot{
     height: 25em; 
 }
+.back-img{
+    background-image: url("/assets/carnival.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40em;
+}
+
+.info{
+    font-family: Courier New, Courier, monospace;
+    color: red;
+    
+}

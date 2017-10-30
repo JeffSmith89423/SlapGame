@@ -12,23 +12,24 @@
 
 <body>
 	<header>
-		
+
 	</header>
-	<span>
+	<div class="container-fluid back-img">
+		<span>
 			<p>
-				<span id="player1.name">Name:Bozo</span>
-				<!--Cannot get to update dynamically-->
+				<span class="info" id="player1.name">Name:Bozo</span>
+				
 			</p>
 
 			<p>
-				<span id="player1.health">Happiness: 105</span>
+				<span class"info" id="player1.health">Happiness: 105</span>
 			</p>
 			<p>
-				<span id="player1.hits">Hits: 0</span>
+				<span class="info" id="player1.hits">Hits: 0</span>
 			</p>
 		</span>
-	<img class=headshot src="assets/happy-clown.png" alt="">
-	<!-- <div>
+		<img class="headshot" id="headshot" src="/assets/happy-clown.png" alt="">
+		<div>
 		<button class="btn btn-default">
 			<h1>Balloon Shield</h1>
 		</button>
@@ -42,8 +43,8 @@
 		<button class="btn btn-default">
 			<h1>Malt Liquor</h1>
 		</button>
-	</div> -->
-	<button class="btn btn-default" onclick="slap('player1.health')">
+	</div>
+		<button class="btn btn-default" onclick="slap('player1.health')">
 			<h1>Slap</h1>
 		</button>
 		<button class="btn btn-default" onclick="punch('player1.health')">
@@ -52,9 +53,10 @@
 		<button class="btn btn-default" onclick="kick('player1.health')">
 			<h1>Kick</h1>
 		</button>
+	</div>
 	<script src="game.js"></script>
 	<footer>
-		
+
 	</footer>
 </body>
 
