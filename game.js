@@ -23,7 +23,7 @@ function slap() {
 function punch() {
     // player1.name === "Bozo"
     if (player1.health >= 5) {
-        player1.health -= 5// * this.addMods; //breaks Health Function
+        player1.health -= 5 * addMods()// * this.addMods; //breaks Health Function
         player1.hits += 1;
 
     } else {
@@ -34,12 +34,12 @@ function punch() {
 function kick() {
     // player1.name === "Bozo"
     if (player1.health >= 10) {
-        player1.health -= 10// * this.addMods; //breaks Health Function
+        player1.health -= 10 * addMods()// * this.addMods; //breaks Health Function
         player1.hits += 1;
-
     } else {
         player1.health = 0;
     }
+    console.log(kick)
     update()
 }
 function update() {
@@ -81,7 +81,7 @@ giveShoe(object)
 function addMods(items) {
     var totalMods = 1
     for (var i = 0; i < items.length; i++) {
-      totalMods += items[i].modifier
+      totalMods -= items[i].modifier
         // var items = items[i];
         // totalMods += items.modifier
     }
