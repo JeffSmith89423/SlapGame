@@ -1,10 +1,13 @@
+//Private
 function Player(name, health, hits) {
     this.name = name;
     this.health = health;
     this.hits = hits;
     this.items = [];
 }
+//Private
 var player1 = new Player('Bozo', 100, 0)
+//Both
 function slap() {
     if (player1.health >= 1) {
         player1.health -= 1 * addMods(player1.items);
@@ -15,6 +18,7 @@ function slap() {
     }
     update()
 }
+//Both
 function punch() {
     if (player1.health >= 5) {
         player1.health -= 5 * addMods(player1.items)
@@ -25,6 +29,7 @@ function punch() {
     }
     update()
 }
+//Both
 function kick() {
     if (player1.health >= 10) {
         player1.health -= 10 * addMods(player1.items)
@@ -35,20 +40,24 @@ function kick() {
     console.log(kick)
     update()
 }
+//Private
 function update() {
     document.getElementById("player1.health").innerHTML = "Happiness: " + player1.health
     document.getElementById("player1.hits").innerHTML = "Hits: " + player1.hits
     if (player1.health == 0) {
 
-        document.getElementById("headshot").src = "/assets/Mad-Clown1.png";
+        document.getElementById("headshot").src = "assets/Mad-Clown1.png";
     }
 }
+//Public
 function giveShield() {
     player1.items.push(mods.shield)
 }
+//Public
 function giveBalloon() {
     player1.items.push(mods.balloonAnimal)
 }
+//Public
 function giveShoe() {
     player1.items.push(mods.shoe)
 }
@@ -73,13 +82,3 @@ function addMods(items) {
     return totalMods
 }
 addMods(player1.items)
-
-
-
-
-
-
-
-
-
-
